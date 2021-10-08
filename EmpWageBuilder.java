@@ -1,7 +1,7 @@
 package com.bridgelabz;
 import java.util.Random;
 
-public class EmpWagebuilder {
+public class EmpWageBuilder {
 	public static int WagePerHour = 20;
 	int FullTimeHours;
 	String name;
@@ -35,15 +35,15 @@ public class EmpWagebuilder {
 		
 	}
 	
-	public EmpWagebuilder(String name, int empID) { //Constructor
+	public EmpWageBuilder(String name, int empID) { //Constructor
 		this.name = name;
 		this.empID = empID;
 		System.out.println(this.name+"\n"+this.empID);
 	}
 
 	public static void main(String[] args) {
-		EmpWagebuilder emp1 = new EmpWagebuilder("Sandesh", 2347);
-		EmpWagebuilder emp2 = new EmpWagebuilder("Swapnil", 2098);
+		EmpWageBuilder emp1 = new EmpWageBuilder("Sandesh", 2347);
+		EmpWageBuilder emp2 = new EmpWageBuilder("Swapnil", 2098);
 		
 		emp1.dailyWage();
 		
