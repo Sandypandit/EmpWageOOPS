@@ -17,13 +17,13 @@ public class EmpWageBuilder {
 		
 		if(attendance == 0){ 
 			workHours = 8; //present
-            System.out.printf("Day %d: P, ", p++);
-            presentdays++;
+            		System.out.printf("Day %d: P, ", p++);
+            		presentdays++;
 		}
 		
-        else if(attendance == 1){ 
+        	else if(attendance == 1){ 
 			workHours = 0;//absent
-            System.out.printf("Day %d: A, ", p++); 
+            		System.out.printf("Day %d: A, ", p++); 
 		}
 		
 		int DailyWage = WagePerHour*workHours;
