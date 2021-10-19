@@ -1,43 +1,26 @@
 package com.bridgelabz;
 import java.util.Random;
 
-public class EmpWageBuilder {
-	public static int WagePerHour = 20;
-	int workDays = 20;
+class EmpWagebuilder {
 	String name;
 	int empID;
-	int p=1;
-	
-	public void monthlyWage() {
-		//Monthly wage Calculation
-		Random random = new Random();
-		int workHoursComp = random.nextInt(98,101); //getting working HOURS
-	    int workDaysComp = random.nextInt(18,21); //getting working DAYS
 
-		double dailyWage = 160;
-		double monthlyWage = dailyWage*workDays;
-		if (workHoursComp ==100 && workDaysComp == 20){
-		System.out.println("\n"+this.name+", you have completed montly working hours and days");
-		System.out.println("Monthly wage of employee is Rs " + monthlyWage);
-	    }
-		else{ System.out.println("\n"+this.name+", You haven't completed working "
-				+ "hours of 100 hours or working days of 20 days"); };
+	public void attendance() {
+		Random rd = new Random(2);
+		int a = rd.nextInt();
+		if(a==1) { System.out.println("Employee is present"); }
+		else { System.out.println("Employee is absent"); }
 	}
 	
-	public EmpWageBuilder(String name, int empID) { //Constructor
+	public EmpWagebuilder(String name, int empID) {
 		this.name = name;
 		this.empID = empID;
-		System.out.println(this.name+"\n"+this.empID);
+		System.out.println(name+"\n"+empID);
 	}
-
-	public static void main(String[] args) {
-		
-		EmpWageBuilder emp1 = new EmpWageBuilder("Sandesh", 2347);
-		EmpWageBuilder emp2 = new EmpWageBuilder("Swapnil", 2098);
-
-		emp1.monthlyWage();
-		
-		emp2.monthlyWage();
+	public static void main(String[] args){
+		//Empwagebuilder
+		EmpWagebuilder emp1 = new EmpWagebuilder("Sandesh", 2347);
+		emp1.attendance();
+		System.out.println(emp1);
 	}
-
 }
